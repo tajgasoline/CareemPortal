@@ -36,8 +36,8 @@ function login(){
       $("#pv").text("Please Enter Password!");              
   }  
 
-else
-{
+  else
+  {
 
     $.ajax({
         url: "api/Login-Form.php",
@@ -50,31 +50,54 @@ else
 
         dataType: "JSON",
         beforeSend: function(){
-         BtnLoadingTrue();
-     },
-     success: function (data) 
-     { 
+           BtnLoadingTrue();
+       },
+       success: function (data) 
+       { 
         BtnLoadingFalse();
-     var result = data.result;
+        var result = data.result;
 
 
-     if ( result == "successful")
-     {
-        var username = data.username;
-        Swal.fire({
-          title: "Welcome " + username,
-          type: "success",
-          customClass: 'animated fadeIn',
-          timer: 4000
-      })
+        if ( result == "successful")
+        {
+            var username = data.username;
+            var role = data.role;
 
-        .then(function () {
+            if(role == "User"){
+
+               Swal.fire({
+                  title: "Welcome " + username,
+                  type: "success",
+                  customClass: 'animated fadeIn',
+                  timer: 4000
+              }).then(function () {
+                window.location.href = 'Home.php';
+            }); 
+          } else  if(role == "Manager"){
+           Swal.fire({
+              title: "Welcome " + username,
+              type: "success",
+              customClass: 'animated fadeIn',
+              timer: 4000
+          }).then(function () {
             window.location.href = 'Home.php';
         });
-    }   else if ( result == "norecord")  { 
+      }
+      else  if(role == "SuperAdmin"){
+           Swal.fire({
+              title: "Welcome " + username,
+              type: "success",
+              customClass: 'animated fadeIn',
+              timer: 4000
+          }).then(function () {
+            window.location.href = 'Home.php';
+        });
+      }
+
+  }   else if ( result == "norecord")  { 
 
 
-       Swal.fire({
+     Swal.fire({
         title: 'Account Not Found',
         type: "error",
         customClass: 'animated fadeIn',
@@ -83,31 +106,31 @@ else
         window.location.href = 'Login.php';
     });
 } 
- else  { 
+else  { 
 
 
-       Swal.fire({
-        title: 'Invalid Username/Password',
-        type: "error",
-        customClass: 'animated fadeIn',
-        timer: 4000
-    }).then(function () {
-        window.location.href = 'Login.php';
-    });
+ Swal.fire({
+    title: 'Invalid Username/Password',
+    type: "error",
+    customClass: 'animated fadeIn',
+    timer: 4000
+}).then(function () {
+    window.location.href = 'Login.php';
+});
 } 
 return data;
 
 }
 });
 }
- 
+
 }
 
- 
+
 
 function getsite(){
 
-var Email = $("#Email").val();
+    var Email = $("#Email").val();
     $.ajax({
         url: "api/getsite.php",
 

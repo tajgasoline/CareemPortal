@@ -204,15 +204,18 @@ function getCustomers(){
 
 function settingCustomerValues(){
  
+
 var  vehiclenumber = $('#Search').find(':selected').data('vehiclenumber');
 var  customername = $('#Search').find(':selected').data('customername');
 var  contactnumber = $('#Search').find(':selected').data('contactnumber');
+var  captainid = $('#Search').find(':selected').data('captainid');
+var  vehicleid = $('#Search').find(':selected').data('vehicleid');
 
 $("#VehicleNumber").val(vehiclenumber);
 $("#CustomerName").val(customername);
 $("#ContactNumber").val(contactnumber);
-
-
+$("#captainid").val(captainid);
+$("#vehicleid").val(vehicleid);
 
  
 }

@@ -11,13 +11,15 @@ if(isset($_POST['VehicleType']) )
 	$result = array(); 
 
 	include('../MainConnect.php');  
-	$query = "select vehiclenumber,customername,contactnumber from careemportalcustomers
+	$query = "select captainid,vehicleid,vehiclenumber,customername,contactnumber from careemportalcustomers
 where vehicletype='".$VehicleType."' and status='Active'";
 	$stmt = sqlsrv_query($MainConnect, $query, array(), array("Scrollable" => 'static')) or die(sqlsrv_errors());
 	while ($row = sqlsrv_fetch_array($stmt))
 	{
 
 		$options .= "<option 
+		data-captainid='".$row["captainid"]."'
+		data-vehicleid='".$row["vehicleid"]."'
 		data-vehiclenumber='".$row["vehiclenumber"]."'
 		data-customername='".$row["customername"]."'
 		data-contactnumber='".$row["contactnumber"]."'

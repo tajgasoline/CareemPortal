@@ -6,7 +6,8 @@ function tblAllUsers(){
         "ajax": "api/TblAllUsers.php",
         "columns": [
          { "data": "Empty"},
-           { "data": "staffusername"} ,{ "data": "staffpass"} ,{ "data": "Role"} 
+           { "data": "staffusername"} ,{ "data": "staffpass"} ,
+           { "data": "Role"},{ "data": "site"}, 
           
         ],
       });
@@ -22,7 +23,10 @@ $(document).ready(function()
 $(document).on("click", ".edit-modal", function(){
 
        
-         $("#id2").val($(this).attr("id"));$("#staffusername1").val($(this).data("staffusername"));$("#staffpass1").val($(this).data("staffpass"));$("#Role1").val($(this).data("role"));
+         $("#id2").val($(this).attr("id"));$("#staffusername1").val($(this).data("staffusername"));
+         $("#staffpass1").val($(this).data("staffpass"));
+         $("#Role1").val($(this).data("role"));
+         $("#Site1").val($(this).data("site"));
      
       });
 

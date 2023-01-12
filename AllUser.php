@@ -65,6 +65,7 @@
                                         <thead>
                                     <tr>
                                     <th></th><th>staffusername</th><th>staffpass</th><th>role</th>
+                                    <th>site</th>
                                     </tr>
                                         </thead>
                                         <tbody>
@@ -108,8 +109,7 @@
 <select class="form-control" id="Role">
     <option value="null" selected disabled>Select Role</option>
     <option value="Manager">Manager</option>
-    <option value="Cashier">Cashier</option>
-    <option value="Order Taker">Order Taker</option>
+    <option value="User">User</option>
 </select>
   <span class="help-block custom-block-hide" id="3v"><small ></small></span>
   </div>
@@ -170,8 +170,7 @@
 <select class="form-control" id="Role1">
     <option value="null" selected disabled>Select Role</option>
     <option value="Manager">Manager</option>
-    <option value="Cashier">Cashier</option>
-    <option value="Order Taker">Order Taker</option>
+    <option value="User">User</option>
 </select>
   <span class="help-block custom-block-hide" id="3v1"><small ></small></span>
   </div>

@@ -2,16 +2,16 @@
 
     error_reporting(1);
     // // live
-    // $serverName = "192.168.0.45";//serverName\instanceName
-    // $userId = "sa";
-    // $userPassword = "P@ssguard11";
-    // $database = "TAJ_DynamicsAX";
-
-    // UAT
-     $serverName = "MSDTESTSRV";
+    $serverName = "192.168.0.45";
     $userId = "sa";
     $userPassword = "P@ssguard11";
-    $database = "TAJ_DynamicsAX";
+    $database = "CareemPortal";
+
+    // UAT
+    //  $serverName = "MSDTESTSRV";
+    // $userId = "sa";
+    // $userPassword = "P@ssguard11";
+    // $database = "CareemPortal";
 
 
     $connectionInfo = array("UID" => $userId,

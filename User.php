@@ -1,8 +1,20 @@
 <?php 
 session_start();
+
+    if( !isset($_SESSION['staffusername']) ){
+        header("location: Login.php");
+    } 
+
+    if( !isset($_SESSION['role']) == 'User' ){
+        header("location: Login.php");
+    } 
+
 $staffusername = $_SESSION['staffusername'];
 $site = $_SESSION['site'];
 $role = $_SESSION['role'];
+
+
+
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -70,8 +82,6 @@ $role = $_SESSION['role'];
                                 <option value="null" selected disabled>Select Type</option>
                                 <option value="Car">Car</option>
                                 <option value="Bike">Bike</option> 
-                                <option value="Rickshaw">Rickshaw</option> 
-                                <option value="Pickup">Pickup</option> 
                             </select>
                             <span class="help-block custom-block-hide" id="3v"><small ></small></span>
                         </div>
@@ -104,17 +114,6 @@ $role = $_SESSION['role'];
                               <input class="form-control  " type="text" disabled="" placeholder="Contact Number" id="ContactNumber"><span class="help-block custom-block-hide" id="1v"><small ></small></span>
 
                                  <input class="form-control  " type="text" disabled="" hidden="" id="printid">
-                          </div>
-                      </div>
-                      <div class="form-group row">
-                          <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Captain No.</label>
-                          <div class="col-sm-8">
-                              <input class="form-control  " type="text" disabled="" placeholder="Captain No." id="captainid"><span class="help-block custom-block-hide" id="vv1"><small ></small></span>
-                          </div>
-                      </div><div class="form-group row">
-                          <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Vehicle ID.</label>
-                          <div class="col-sm-8">
-                              <input class="form-control  " type="text" disabled="" placeholder="Vehicle ID" id="vehicleid"><span class="help-block custom-block-hide" id="vv1"><small ></small></span>
                           </div>
                       </div>
                  
