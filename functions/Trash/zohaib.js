@@ -1,0 +1,4 @@
+/ varaible
+var salman = ''
+
+function 

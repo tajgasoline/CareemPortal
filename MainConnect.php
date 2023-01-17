@@ -2,7 +2,9 @@
 
     error_reporting(1);
     // // live
-    $serverName = "192.168.0.45";
+    // $serverName = "192.168.0.45";
+    // $serverName = "MSDTESTSRV";
+     $serverName = "192.168.0.60";
     $userId = "sa";
     $userPassword = "P@ssguard11";
     $database = "CareemPortal";

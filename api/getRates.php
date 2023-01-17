@@ -24,7 +24,11 @@ if(isset($_POST['check']) )
 	while ($row = sqlsrv_fetch_array($stmt))
 	{
 
+
+
 		if($row["productname"] == 'Petrol'){
+ 
+
 
 			$PetrolPrice = $row["price"];
 			$PetrolDiscount = $row["discount"];

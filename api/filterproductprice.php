@@ -12,7 +12,8 @@ if(isset($_POST['price']) )
 	$result = array(); 
 
 	include('../MainConnect.php');  
-	$query = "select price,discount from careemportalproducts where productid=".$price."";
+	$query = "select price,discount from careemportalproducts where id=".$price."";
+ 
 	$stmt = sqlsrv_query($MainConnect, $query, array(), array("Scrollable" => 'static')) or die(sqlsrv_errors());
 	while ($row = sqlsrv_fetch_array($stmt))
 	{

@@ -82,6 +82,8 @@
         </p>
     </div>
     <button id="btnPrint" class="hidden-print">Print</button>
+    <button id="btnClose" class="hidden-print">Close</button>
+    
     <script src="printer.js"></script>
 
 
