@@ -26,7 +26,7 @@ if (!isset($_SESSION['role'])) {
         '; 
     }
 
-        if($role == 'SuperAdmin'  ){
+        if($role == 'Careem'  ){
         echo ' <li class="nav-item">
                                     <a class="nav-link"  style="padding:0.8rem 0.1rem !important;" href="#"><i class="ti-bar-chart"></i><span>Customers Management</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                                 

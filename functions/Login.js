@@ -83,6 +83,16 @@ function login(){
             window.location.href = 'Home.php';
         });
       }
+      else  if(role == "Careem"){
+           Swal.fire({
+              title: "Welcome " + username,
+              type: "success",
+              customClass: 'animated fadeIn',
+              timer: 4000
+          }).then(function () {
+            window.location.href = 'AddCustomer.php';
+        });
+      }
       else  if(role == "SuperAdmin"){
            Swal.fire({
               title: "Welcome " + username,
