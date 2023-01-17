@@ -9133,3 +9133,7 @@ color: red;
 .cust-font-rem{
       font-size: 0.7rem !important;
 }
+
+.custom-search-field{
+  text-transform: uppercase !important;
+}

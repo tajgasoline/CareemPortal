@@ -74,7 +74,9 @@ $role = $_SESSION['role'];
                  <div class="form-group row">
                 <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Search</label>
                 <div class="col-sm-6">
-                <input class="form-control  " type="text"   placeholder="Search Here..." id="Search">         
+
+                <input class="form-control custom-search-field" style=" text-transform: uppercase !important;"  type="text"   placeholder="Search Here..." id="Search">         
+                 
                  </div>
                   <div class="col-sm-2">
                     <button type="button" class="btn btn-primary waves-effect waves-light" id="btnSearch" onclick="Searching();"> Search</button>
