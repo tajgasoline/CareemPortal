@@ -31,7 +31,16 @@ if (!isset($_SESSION['role'])) {
 
         <li id="FBRtransactions2" ><a style="padding:0.8rem 0rem !important;" href="AllUser.php"><i class="ti-bar-chart"></i><span>User Management</span></i></span></a></li>
 
-         <li id="FBRtransactions2" ><a style="padding:0.8rem 0rem !important;" href="Customers.php"><i class="ti-bar-chart"></i><span>Customers Management</span></i></span></a></li>
+
+         <li class="nav-item">
+                                    <a class="nav-link"  style="padding:0.8rem 0.1rem !important;" href="#"><i class="ti-bar-chart"></i><span>Customers Management</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                                
+                                    <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                        <li><a href="AddCustomer.php">Add Customer</a></li>
+                                        <li><a href="UpdateCustomer.php">Update Customer</a></li>            
+                                    </ul>            
+                                
+                                </li>
 
 
              <li id="FBRtransactions2" ><a style="padding:0.8rem 0rem !important;" href="Sites.php"><i class="ti-bar-chart"></i><span>Sites Management</span></i></span></a></li>
@@ -42,6 +51,8 @@ if (!isset($_SESSION['role'])) {
  
     ?>
    
+
+         <!-- <li id="FBRtransactions2" ><a style="padding:0.8rem 0rem !important;" href="Customers.php"><i class="ti-bar-chart"></i><span>Customers Management</span></i></span></a></li> -->
   
   </ul>
 </div>

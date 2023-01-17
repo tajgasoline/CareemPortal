@@ -32,26 +32,26 @@ if(isset($_POST['check']) )
 
 	$result = array(); 
 
-	include('../MainConnect.php');  
-	$query = "select top 1000 id,captainid,vehicleid,vehiclenumber,customername,contactnumber,vehicletype from careemportalcustomers	where   status='Active'";
-	$stmt = sqlsrv_query($MainConnect, $query, array(), array("Scrollable" => 'static')) or die(sqlsrv_errors());
-	while ($row = sqlsrv_fetch_array($stmt))
-	{
-		$mysql_data[] = array
-		( 
-			"id" => $row["id"],
-			"captainid" => $row["captainid"],
-			"vehicleid" => $row["vehicleid"],
-			"vehiclenumber" => $row["vehiclenumber"],
-			"customername" => $row["customername"],
-			"contactnumber" => $row["contactnumber"],
-			"vehicletype" => $row["vehicletype"]
-		);
-	} 
+	// include('../MainConnect.php');  
+	// $query = "select top 1000 id,captainid,vehicleid,vehiclenumber,customername,contactnumber,vehicletype from careemportalcustomers	where   status='Active'";
+	// $stmt = sqlsrv_query($MainConnect, $query, array(), array("Scrollable" => 'static')) or die(sqlsrv_errors());
+	// while ($row = sqlsrv_fetch_array($stmt))
+	// {
+	// 	$mysql_data[] = array
+	// 	( 
+	// 		"id" => $row["id"],
+	// 		"captainid" => $row["captainid"],
+	// 		"vehicleid" => $row["vehicleid"],
+	// 		"vehiclenumber" => $row["vehiclenumber"],
+	// 		"customername" => $row["customername"],
+	// 		"contactnumber" => $row["contactnumber"],
+	// 		"vehicletype" => $row["vehicletype"]
+	// 	);
+	// } 
 
 
 
-	$data["CaptainData"] = $mysql_data;
+	// $data["CaptainData"] = $mysql_data;
 	$data["dbPetrolPrice"] = $dbPetrolPrice;
 	$data["dbDieselPrice"] = $dbDieselPrice;
 	$data["dbDiscount"] = $dbDiscount; 

@@ -13,7 +13,9 @@ session_start();
 $username = $_SESSION['staffusername'];
 $site = $_SESSION['site'];
 $role = $_SESSION['role'];
-   
+    $dbusername='';
+  $username='';
+
   $result="";
   include('../MainConnect.php'); 
   if(!$MainConnect){
@@ -22,7 +24,16 @@ $role = $_SESSION['role'];
   }
   else{
 
- 
+ include('../MainConnect.php');  
+  $query = "select username  from CareemPortalUsers where username = '".$staffusername."'";
+  $stmt = sqlsrv_query($MainConnect, $query, array(), array("Scrollable" => 'static')) or die(sqlsrv_errors());
+  while ($row = sqlsrv_fetch_array($stmt))
+  {
+    $username = $row["username"]; 
+
+  } 
+
+  if( $username == '' || $username == null){
 
  include('../MainConnect.php');  
   $query = "select count(id) as id from careemportal";
@@ -48,7 +59,19 @@ $role = $_SESSION['role'];
     }
   
   }
+   else
+  {
+
+    $result = "Username Already Exist";
+    // echo json_encode($data);
+
+
+  }
+
   
+  }
+
+
    
 
 

@@ -59,29 +59,44 @@ $role = $_SESSION['role'];
             <label for="example-text-input" class="col-lg-12 col-form-label   cust-font-rem-Data-title text-center">Careem Portal</label>
             <div class="row">
               <div class="col-md-6"> 
-               <div class="form-group row">
+
+        <!--       <div class="form-group row">
+                <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Search</label>
+                <div class="col-sm-8">
+                 <select class="select2 form-control  custom-select select2-hidden-accessible" style="width: 100%; height:36px;" tabindex="-1" aria-hidden="true" onchange="settingCustomerValues();"  id="Search">
+                    <select class="form-control" id="VehicleNumber" >  
+                     <option >Loading .....</option>
+                   </select>
+                 <input class="form-control  " type="text"  placeholder="Vehicle Number" id="VehicleNumber"><span class="help-block custom-block-hide" id="2v"><small ></small></span>  
+                 </div>
+               </div> -->
+
+                 <div class="form-group row">
+                <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Search</label>
+                <div class="col-sm-6">
+                <input class="form-control  " type="text"   placeholder="Search Here..." id="Search">         
+                 </div>
+                  <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary waves-effect waves-light" id="btnSearch" onclick="Searching();"> Search</button>
+                  </div>
+               </div>
+
+                    <div class="form-group row">
                 <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Vehicle Type</label>
                 <div class="col-sm-8">
-                  <select class="form-control custom-select" id="VehicleType" onchange="getCustomers();">
+                  <input class="form-control  " type="text" disabled="" placeholder="Vehicle Type" id="VehicleType">
+            <!--       <select class="form-control custom-select" disabled id="VehicleType" onchange="getCustomers();">
                     <option value="null" selected disabled>Select Type</option>
                     <option value="Car">Car</option>
                     <option value="Bike">Bike</option> 
                     <option value="Rickshaw">Rickshaw</option> 
                     <option value="Pickup">Pickup</option> 
-                  </select>
+                  </select> -->
                   <span class="help-block custom-block-hide" id="3v"><small ></small></span>
                 </div>
               </div>  
-              <div class="form-group row">
-                <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Search</label>
-                <div class="col-sm-8">
-                 <select class="select2 form-control  custom-select select2-hidden-accessible" style="width: 100%; height:36px;" tabindex="-1" aria-hidden="true" onchange="settingCustomerValues();"  id="Search">
-                   <!-- <select class="form-control" id="VehicleNumber" > -->
-                     <option >Loading .....</option>
-                   </select>
-                   <!-- <input class="form-control  " type="text"  placeholder="Vehicle Number" id="VehicleNumber"><span class="help-block custom-block-hide" id="2v"><small ></small></span> -->
-                 </div>
-               </div>
+
+
                <div class="form-group row">
                 <label for="example-text-input" class="col-sm-4 col-form-label  cust-font-rem">Vehicle No.</label>
                 <div class="col-sm-8">
@@ -254,8 +269,6 @@ $role = $_SESSION['role'];
     <script src="printer.js"></script>
 
 
-
-<script src="assets/printer/printer.js"></script>
-<script src="functions/Invoice.js"></script>
+ 
   </body>
   </html>

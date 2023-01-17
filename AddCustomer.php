@@ -55,45 +55,14 @@
                 <div class="card-body">
                     <div class="text-left">
                         <!-- Small modal -->
-                        <button type="button" class="btn btn-gradient-primary waves-effect waves-light" data-toggle="modal" data-animation="bounce" data-target=".bs-add-modal-lg">Add New</button>
+ 
                     </div>
                     <br>
                     <br>
 
-
-                    <table id="datatable" class="table table-bordered " style=" overflow-x: auto;border-collapse: collapse; border-spacing: 0; width: 100%;">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>ID</th>
-                                <th>VehicleID</th>
-                                <th>VEHICLETYPE</th>
-                                <th>VEHICLENUMBER</th>
-                                <th>CaptainID</th>
-                                <th>CUSTOMERNAME</th>
-                                <th>CONTACTNUMBER</th> 
-                                <th>STATUS</th> 
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div> <!-- end col -->
-
-
-
-        <div class="modal fade bs-add-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title mt-0" id="myLargeModalLabel">Add AllUsers</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="col-lg-12">
+                            <div class="modal-body">
+              <div class="col-lg-12">
+                       <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-12">
                                 <label for="example-text-input" class="col-lg-12 col-form-label  C-Modal-Data-title text-center">Add AllUsers</label>
@@ -115,6 +84,7 @@
                                     <option value="Car">Car</option>
                                     <option value="Bike">Bike</option>
                                     <option value="Rickshaw">Rickshaw</option>
+                                      <option value="Pickup">Pick up</option>
                                 </select>
                                 <span class="help-block custom-block-hide" id="1v"><small ></small></span>
                                   </div>
@@ -151,8 +121,8 @@
                                   <div class="col-sm-10"> 
                                       <select class="form-control" id="Status">
                                         <option value="null" selected disabled>Select Status</option>
-                                        <option value="Active">Active</option>
-                                        <option value="InActive">In Active</option>
+                                        <option value="ACTIVE">Active</option>
+                                        <option value="INACTIVE">In Active</option>
                                     </select>
                                     <span class="help-block custom-block-hide" id="3v"><small ></small></span>
                                 </div>
@@ -171,105 +141,15 @@
                  </div>
              </div>
          </div>
-     </div><!-- /.modal-content -->
- </div><!-- /.modal-dialog -->
-</div>
+     </div> 
 
-
-<div class="modal fade edit-modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title mt-0" id="myLargeModalLabel">Edit AllUsers</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            </div>
-            <div class="modal-body">
-              <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <label for="example-text-input" class="col-lg-12 col-form-label  C-Modal-Data-title text-center">Edit All Customer</label>
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label text-right">Id</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" id="ID1" disabled="">
-                                <span class="help-block custom-block-hide" id="0v1"><small ></small></span></div>
-                            </div>
-
-                            <div class="form-group row">
-                              <label for="example-text-input" class="col-sm-2 col-form-label text-right">VehicleID</label>
-                              <div class="col-sm-10">
-                                  <input class="form-control  " type="text" placeholder="VehicleID" id="VehicleID1"><span class="help-block custom-block-hide" id="1v"><small ></small></span>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="example-text-input" class="col-sm-2 col-form-label text-right">VEHICLETYPE</label>
-                              <div class="col-sm-10">
-                                  <!-- <input class="form-control  " type="text" placeholder="VEHICLETYPE" id="VEHICLETYPE1"> -->
-                                   <select class="form-control" id="VEHICLETYPE1">
-                                    <option value="null" selected disabled>Select VEHICLE TYPE</option>
-                                    <option value="Car">Car</option>
-                                    <option value="Bike">Bike</option>
-                                    <option value="Rickshaw">Rickshaw</option>
-                                </select>
-                                <span class="help-block custom-block-hide" id="1v"><small ></small></span>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="example-text-input" class="col-sm-2 col-form-label text-right">VEHICLENUMBER</label>
-                              <div class="col-sm-10">
-                                  <input class="form-control  " type="text" placeholder="VEHICLENUMBER" id="VEHICLENUMBER1"><span class="help-block custom-block-hide" id="1v"><small ></small></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group row">
-                              <label for="example-text-input" class="col-sm-2 col-form-label text-right">CaptainID</label>
-                              <div class="col-sm-10">
-                                  <input class="form-control  " type="text" placeholder="CaptainID" id="CaptainID1"><span class="help-block custom-block-hide" id="1v"><small ></small></span>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="example-text-input" class="col-sm-2 col-form-label text-right">CUSTOMERNAME</label>
-                              <div class="col-sm-10">
-                                  <input class="form-control  " type="text" placeholder="CUSTOMERNAME" id="CUSTOMERNAME1"><span class="help-block custom-block-hide" id="1v"><small ></small></span>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="example-text-input" class="col-sm-2 col-form-label text-right">CONTACTNUMBER</label>
-                              <div class="col-sm-10">
-                                  <input class="form-control  " type="text" placeholder="CONTACTNUMBER" id="CONTACTNUMBER1"><span class="help-block custom-block-hide" id="1v"><small ></small></span>
-                              </div>
-                          </div>
-
-
-                          <div class="form-group row">
-                              <label for="example-text-input" class="col-sm-2 col-form-label text-right">Status</label>
-                              <div class="col-sm-10"> 
-                                  <select class="form-control" id="Status1">
-                                    <option value="null" selected disabled>Select Status</option>
-                                    <option value="Active">Active</option>
-                                    <option value="InActive">In Active</option>
-                                </select>
-                                <span class="help-block custom-block-hide" id="3v"><small ></small></span>
-                            </div>
-                        </div>
-
-                    </div>
+ 
                 </div>
-                <div class="form-group row">
-                    <div class="col-md-4"> 
-                      <button type="button" onclick="UpdateAllUsers();" class="btn btn-primary waves-effect waves-light" style="width: 100%;">Update</button>
-                  </div>
+            </div>
+        </div> <!-- end col -->
 
-                  <div class="col-md-4"> 
-                     <button type="button" class="btn btn-light waves-effect waves-light" data-dismiss="modal" id="btncancel1" aria-hidden="true" style="width: 100%;">Cancel</button>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div>
 
+ 
 
 
 
@@ -302,7 +182,7 @@
 <script src="assets/pages/jquery.sweet-alert.init.js"></script>
 
 
-<script src="functions/Customers.js"></script>
+<script src="functions/AddCustomer.js"></script>
 
 <!-- App js -->
 <script src="assets/js/app.js"></script>

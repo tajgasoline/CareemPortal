@@ -110,7 +110,16 @@ var staffusername = $("#staffusername").val();
  $("#btncancel").trigger("click");
    $("#datatable").DataTable().destroy(); 
  tblAllUsers();
-                } 
+                }  else   if ( result == "Username Already Exist" )
+              { 
+                  Swal.fire({
+                    title: "Username Already Exist!",
+                    type: "error",
+                    timer: 4000,
+                    showConfirmButton: true,
+                })  
+
+              } 
                 else 
                 { 
                     Swal.fire({
@@ -120,7 +129,7 @@ var staffusername = $("#staffusername").val();
              timer: 4000,
             showConfirmButton: true,
           }).then(function () {
-            window.location.href = "index.php";
+            window.location.href = "Home.php";
           });
                 }
                 return data;
@@ -209,7 +218,16 @@ $("#btncancel1").trigger("click");
    $("#datatable").DataTable().destroy(); 
  tblAllUsers();
 
-                } 
+                }  else   if ( result == "Username Already Exist" )
+              { 
+                  Swal.fire({
+                    title: "Username Already Exist!",
+                    type: "error",
+                    timer: 4000,
+                    showConfirmButton: true,
+                })  
+
+              } 
                 else 
                 { 
                     Swal.fire({
