@@ -47,7 +47,7 @@ $role = $_SESSION['role'];
       // for New insertion
             $query = "insert into CareemPortalUsers(id,username,password,site,role) values (?,?,?,?,?) ";
 
-            $params = array(&$id,&$staffusername,&$staffpass,&$site,&$role);
+            $params = array(&$id,&$staffusername,&$staffpass,&$site,&$Role);
             $stmt = sqlsrv_prepare($MainConnect, $query, $params);
  
     if (sqlsrv_execute( $stmt ) === false ) 

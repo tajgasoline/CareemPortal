@@ -21,7 +21,7 @@ if(isset($_POST["id"]) && isset($_POST["staffusername1"]) && isset($_POST["staff
 
 	} 
  
-if( $username == '' || $username == null){
+// if( $username == '' || $username == null){
 
 	include('../MainConnect.php');     
 	$query2 = "UPDATE CareemPortalUsers SET username='$staffusername',password='$staffpass',Role='$Role' WHERE id=$id ";
@@ -42,14 +42,14 @@ if( $username == '' || $username == null){
 
 	}
 
-}else
-	{
+// }else
+// 	{
 
-		$data["result"] = "Username Already Exist";
-		echo json_encode($data);
+// 		$data["result"] = "Username Already Exist";
+// 		echo json_encode($data);
 
 
-	}
+// 	}
 
   
 
