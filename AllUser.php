@@ -109,7 +109,13 @@
 <select class="form-control" id="Role">
     <option value="null" selected disabled>Select Role</option>
     <option value="Manager">Manager</option>
-    <option value="User">User</option>
+    <option value="User">User</option> 
+    <?php 
+    if($_SESSION['role'] == 'SuperAdmin'){
+echo " <option value='SuperAdmin'>SuperAdmin</option>";
+    }
+ 
+    ?>
 </select>
   <span class="help-block custom-block-hide" id="3v"><small ></small></span>
   </div>
@@ -171,6 +177,12 @@
     <option value="null" selected disabled>Select Role</option>
     <option value="Manager">Manager</option>
     <option value="User">User</option>
+       <?php 
+    if($_SESSION['role'] == 'SuperAdmin'){
+echo " <option value='SuperAdmin'>SuperAdmin</option>";
+    }
+ 
+    ?>
 </select>
   <span class="help-block custom-block-hide" id="3v1"><small ></small></span>
   </div>
